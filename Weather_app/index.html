@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <style>
+        *{
+          color : rgb(255, 255, 255);
+        }
+        body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height : 100vh
+        }
+        .card{
+         height : 450px;
+         width : 370px;
+         background-color: rgb(94, 156, 156);
+         border-radius: 25px;
+        }
+        .search{
+          margin: 30px 30px 15px 30px;
+          width : 100%
+        }
+        .info {
+         width : 60%;
+         padding : 15px;
+         border: none;
+         border-radius: 30px;
+         outline: none;
+         font-weight: 300;
+         color : rgb(117, 110, 110);
+         padding-left: 20px;
+         border-radius: none;
+         font-size: 16px;
+         }
+         i{
+          margin-left : 7px;
+          font-size: 18px;
+          background-color: white;
+          padding: 14px;
+          border-radius: 19px;
+          color: #222;
+        }
+        .image {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 25px;
+        }
+        .image img {
+           height : 110px;
+           width : 110px;
+        }
+        .temp {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-top: 25px;
+        }
+        .text{
+          font-size : 50px;
+        }
+        .city{
+          font-size : 35px;
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: 600
+        }
+
+        .footer {
+          display: flex;
+          /* justify-content: space-evenly; */
+          gap : 45px;
+          align-items: center;
+          margin-top: 30px;
+        }
+        .humidity {
+           display: flex;
+           flex-wrap: wrap;
+           width: 100px;
+           height: 50px;
+           margin-left : 50px;
+        }
+        .wind {
+           display: flex;
+           flex-wrap: wrap;
+           width: 130px;
+           height: 50px;
+           margin-left : 19px;
+        }
+        .humidity img{
+          height : 28px;
+          margin-top: 5px;
+        }
+        .wind img{
+          height : 28px;
+        }
+        .humidity .hum-percent{
+            font-size: 23px;
+            margin-left: 8px;
+        }
+        .humidity .hum-text{
+            font-size: 15px;
+            margin-left: 43px;
+        }
+        .wind .wind-percent{
+            font-size: 23px;
+            margin-left: 8px;
+        }
+        .wind .wind-text{
+            font-size: 15px;
+            margin-left: 41px;
+        }
+       
+   </style>
+</head>
+<body style="background-color: #222;">
+    <div class="card"> 
+      <div class="search">
+        <input type="city" class="info" placeholder="Enter city name">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      </div>
+
+      <div class="image">
+            <img src="images/clouds.png" class="images" alt="">
+      </div>  
+       <div class="temp">
+              <div class="text">22°c</div>
+              <div class="city">New York</div>
+       </div>        
+       
+       <div class="footer"> 
+           <div class="humidity">
+               <img src="images/humidity.png" alt="">
+               <span class="hum-percent">64%</span>
+               <span class="hum-text">Humidity</span>
+           </div>
+
+           <div class="wind">
+            <img src="images/wind.png" alt="">
+            <div class="wind-percent">7.72 km/h</div>
+            <div class="wind-text">Wind Speed</div>
+        </div>
+
+       </div>
+
+  
+
+    <script src="javascript.js"></script>
+</body>
+</html>

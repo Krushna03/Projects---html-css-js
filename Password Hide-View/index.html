@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      *{
+         padding: 0;
+         margin: 0;
+      }
+      .box{
+         height : 100vh;
+         width: 100%;
+         background: #000000;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+      input {   
+          padding: 15px;
+          font-size: 19px;
+          font-weight: 500;
+          background: transparent;
+          outline: none;
+          border: none;
+          border: 3px solid rgb(50, 94, 50);
+          border-radius: 10px;
+          background: #d4d0d0;
+          margin-right: -30px;
+          word-wrap: break-word;
+         }
+         .eye-icon {
+            height: 20px;
+            width: 20px;
+            cursor: pointer;
+         }
+         input::-webkit-contacts-auto-fill-button,
+         input::-webkit-credentials-auto-fill-button,
+         input::-ms-reveal,
+         input::-ms-clear {
+            display: none;
+         }
+   </style>
+</head>
+<body>
+      <div class="box">
+         <input type="password" id="password" placeholder="password">   
+
+         <img id="eyeIcon" class="eye-icon" src="eye-close.png">
+      </div>
+
+<script>
+      const passwordInput = document.getElementById('password');
+      const eyeIcon = document.getElementById('eyeIcon');
+
+      eyeIcon.addEventListener('click', function() {
+         if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            eyeIcon.src = 'eye-open.png';
+         } else {
+            passwordInput.type = 'password';
+            eyeIcon.src = 'eye-close.png';
+         }
+      });
+      
+</script>
+</body>
+</html>
